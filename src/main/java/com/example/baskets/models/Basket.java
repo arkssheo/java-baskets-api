@@ -1,10 +1,10 @@
-package com.example.demo.models;
+package com.example.baskets.models;
 
 public class Basket {
     private String name;
     private String description;
-
-    public Basket() {}
+    private String imagePath;
+    private int numberAvailable = 0;
 
     public Basket(String name, String description) {
         this.name = name;
@@ -25,5 +25,21 @@ public class Basket {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public String getImagePath() {
+        return imagePath;
+    }
+
+    public void setImagePath(String imagePath) {
+        this.imagePath = imagePath;
+    }
+
+    public int getNumberAvailable() {
+        return numberAvailable;
+    }
+
+    public void setNumberAvailable(int numberAvailable) {
+        this.numberAvailable = numberAvailable;
     }
 }

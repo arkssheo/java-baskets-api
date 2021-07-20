@@ -1,0 +1,3 @@
+INSERT INTO baskets(name, description, image_path, available) VALUES ('test basket', 'a test basket', 'https://firebasestorage.googleapis.com/v0/b/basketsnsuch.appspot.com/o/34r4f1py6hd?alt=media&token=8cbe5513-879f-474f-8c2e-598ce6dae758', 1);
+INSERT INTO baskets(name, description, image_path, available) VALUES ('no basket', 'all sold out', '', 0);
+INSERT INTO baskets(name, description, image_path, available) VALUES ('test basket2', 'another test basket', '', 100);
