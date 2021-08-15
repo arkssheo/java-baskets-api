@@ -6,10 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.data.crossstore.ChangeSetPersister;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -34,5 +31,11 @@ public class BasketController {
         } catch (ChangeSetPersister.NotFoundException ex) {
             return ResponseEntity.notFound().build();
         }
+    }
+
+    @RequestMapping(value = "/basket", method = RequestMethod.POST)
+    ResponseEntity addBasket(@RequestBody BasketDTO newBasket) {
+        basketService.save(newBasket);
+        return ResponseEntity.ok(null);
     }
 }

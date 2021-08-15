@@ -6,7 +6,7 @@ import javax.persistence.*;
 @Table(name = "baskets")
 public class BasketDTO {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
     private String description;
